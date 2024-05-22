@@ -1,0 +1,25 @@
+{% extends 'demo/base.html' %}
+{% block content %}
+<div class="forma">
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <p>Введите Email:</p>
+        <input type="text" name="username"/>
+    </div>
+    <div>
+        <p>Введите номер телефона:</p>
+        <input type="tel" name="first_name"/>
+    </div>
+    <div>
+        <p>Введите ФИО:</p>
+        <input type="text" name="last_name"/>
+    </div>
+    <div>
+        <p>Придумайте пароль:</p>
+        <input type="password" name="password"/>
+    </div>
+    <button type="submit">Зарегистрироваться</button>
+</form>
+</div>
+{% endblock %}
